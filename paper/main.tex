@@ -737,11 +737,8 @@ N \cdot E\!\left(\frac{T}{N}\right) \ge E(T), \quad \forall\, N \ge 1.
             $5$ & 异色出现时用 $1$ 颗 $80$k 捕光球 & $q^s = 1$ 避免失败；$10 v_0 - 80\text{k} > 0 \Leftrightarrow v_0 > 8\,000$ $\Rightarrow$ 高 $v_0$ 精灵稳赚 \\
             $6$ & $k=70$--$75$ 不要"冲刺" & M1 LOO 严格主导：$p_k = p_0$ 直至 $k=80$ $\Rightarrow$ 70-75 段无任何特殊收益（图~\ref{fig:sprint}） \\
             $7$ & 棱镜球只用通行证给的 $3$ 个/赛季，不要氪金 & $V_{\text{upgrade}} > 0$ 仅当 $\phi > 640$（氪金）或 $\phi > 0$（免费）；社区估计 $\phi \in [10, 100]$ \\
-            $8$ & 优先冲已接近保底的池 & 减少 $E[\tau]$ 从而提高每日单轮吞吐 \\
-            $9$ & 选高星光值精灵刷池（每只精灵噩梦进度更高） & 缩短野怪触发污染时间，等价缩短 $t_{\text{cycle}}$ \\
-            $10$ & 高级球（$12$k）仅在属性球路线采花跟不上时备用 & 时间预算 LP 显示 S2 仅在 $T_h \ge 16$ h 撞 PVP 上限时才略优 \\
-            $11$ & \textbf{优先冲易出家族}（贝瑟、方方、雪熊、柴渣，$\hat E[\tau] < 9$） & §V 分层后验显示家族 $p_{0,f}$ 跨度 $0.08$--$0.17$，易出家族日产出比难出家族高 $\sim 30\%$（表~\ref{tab:family}） \\
-            $12$ & 难出家族（兔、狼、恶魔狼，$\hat E[\tau] > 11$）需更长 $t_{\text{cycle}}$ & 务必并行多池摊销时间方差，并选高星光值精灵刷池 \\
+            $8$ & 选高星光值精灵刷池，优先易出家族（贝瑟、方方、雪熊、柴渣，$\hat E[\tau] < 9$） & 缩短野怪触发污染时间；§V 分层后验显示家族 $p_{0,f}$ 跨度 $0.08$--$0.17$，易出家族日产出比难出家族高 $\sim 30\%$（表~\ref{tab:family}） \\
+            $9$ & 高级球（$12$k）仅在采花跟不上时备用；难出家族（兔、狼、恶魔狼）需更长 $t_{\text{cycle}}$，务必并行多池摊销方差 & 时间预算 LP 显示 S2 仅在 $T_h \ge 16$ h 撞 PVP 上限时才略优 \\
             \hhline{===}
         \end{tabular}
     \end{center}
@@ -749,41 +746,20 @@ N \cdot E\!\left(\frac{T}{N}\right) \ge E(T), \quad \forall\, N \ge 1.
     \label{tab:sop}
 \end{table*}
 
-\textbf{每日吞吐量估计}：假设玩家每天 $30$ 分钟，按低阶宠物 $\sim 1$ 球 $/$ 污染、$\sim 50$ 污染 $/$ 异色（本研究后验下 $E[\tau] = 16$ 假设单池），并行 $4$ 池 $\Rightarrow$ 每日 $\sim 1$ 个异色（按 SOP 全抓 + 属性球 + 4 池均分）；按 $\$ v_0 = 5\,000$ 计 $\sim 1.4$M 洛克贝净收益/天。每赛季（$\sim 60$ 天）累积 $\sim 60$--$80$ 异色 + $\sim 80$M 洛克贝净收益（不考虑通行证 $3$ 棱镜球的 $\phi$ 升格）。
-
 
 \section{DISCUSSION / 讨论}
 
-\subsection{$p_0$ 的部分识别}
+\subsection{$p_0$ 的部分识别与自报权重鲁棒性}
 
-M1 与 M2/M3 给出的 $\hat p_0$ 不同（$0.092$ vs $0.062$），反映出"高 $p_0$ + 弱偏差"（M1）与"低 $p_0$ + 强偏差"（M2/M3）两条解释路径都可以拟合数据。LOO 选 M1 因为后者复杂度更低（$k^*$/$\eta$ 多余）。但 \textbf{综合出货率} $1/\hat E[\tau]$ 跨模型一致集中在 $[0.06, 0.09]$，构成对官方"$0.02$"的鲁棒拒绝——这是本研究最具实践含义的鲁棒结论。
+M1 与 M2/M3 给出的 $\hat p_0$ 不同（$0.092$ vs $0.062$），反映"高 $p_0$ + 弱偏差"与"低 $p_0$ + 强偏差"两条路径都能拟合数据；LOO 选 M1 因为复杂度更低。但 \textbf{综合出货率} $1/\hat E[\tau]$ 跨模型一致集中在 $[0.06, 0.09]$，构成对官方 $0.02$ 的鲁棒拒绝。(\ref{eq:wk}) 的 4 段自报权重已捕捉主要 U 形结构，但简化于现实：中段 $30$--$77$ 内可能存在缓慢渐变（当前 $b_{\text{low}}$ 仅常数）；凑整偏好未建模；平台异质性（B 站 vs 小红书）使外部有效性受限。
 
-\subsection{4 段自报权重的鲁棒性}
+\subsection{若强行假设官方诚实，及星光值的解耦}
 
-(\ref{eq:wk}) 已捕捉数据的主要 U 形结构（$n=1$ + $n \ge 78$），但仍简化于现实：（i）中段 $30$--$77$ 内可能存在缓慢渐变（当前 $b_{\text{low}}$ 仅一个常数）；（ii）凑整偏好（$10/20/30/...$ 数字凑整效应）未建模；（iii）平台异质性——B 站评论与小红书长帖的选择结构不同，本研究只用 B 站数据，外部有效性受限。未来工作可用随机游走先验给 $w(k)$ 全 80 维自由度 + 平滑约束，但代价是收敛性下降。
+若假设 $p_0 = 0.018$ 严格成立，自报权重需给出 $\ge 5\times$ 的中段抑制才能解释观测——要求"$30$--$77$ 段玩家几乎完全沉默"，与 B 站评论 $13\%$ 中段报告比例不符。鲁棒结论仍是"自报偏差真实且数量级 $5\times$ 左右"。游戏机制中"星光值"只影响每只精灵触发污染的速度（即时间预算 $T_n$），不影响 $p_k$，本研究将其与概率识别解耦。
 
-\subsection{若强行假设官方诚实}
+\subsection{局限与未来工作}
 
-若假设 $p_0 = 0.018$（玩家估计）严格成立，则自报权重必须给出 $\ge 5\times$ 的中段抑制才能解释观测。这要求"$30$--$77$ 段玩家几乎完全沉默"，与 B 站评论实际行为不符（实际 $13\%$ 报告并非 $0$）。即便如此，鲁棒结论仍是"自报偏差真实存在且数量级在 $5\times$ 左右"，而非"官方完全诚实"。
-
-\subsection{星光值与时间预算解耦}
-
-游戏机制中"星光值"影响每只精灵触发污染的速度，而非每次击破的异色概率。这意味着星光值进入 \textbf{时间预算} $T_n$（每池每日可完成的循环数）而非 $p_k$。本研究将该机制与概率识别解耦——后者依赖于玩家自报的"$X$ 次污染出货"事件，与污染发生速率无关。
-
-\subsection{局限}
-
-\begin{enumerate}
-    \item \textbf{单平台数据}：仅 B 站评论，缺 XHS / 贴吧 / TapTap 多平台对照；
-    \item \textbf{无人工金标}：LLM 抽取准确率未交叉验证（V2 §3.4 计划但未执行）；
-    \item \textbf{自报权重简化}：4 段分段常数尚未捕捉中段渐变与凑整文化痕迹；
-    \item \textbf{球价 $q_{\text{cap}}$ 经验估计}：表~\ref{tab:balls} 中各球的 $q$ 来自社区共识，未做严格实测；
-    \item \textbf{机制混淆}：数据看似硬保底，但也可能是软保底窗口太窄 + 自报偏差抹平导致的混淆；
-    \item \textbf{横向对比的估计异质性}：表~\ref{tab:cross_gacha} 中其他游戏的 $E[\tau]$ 是公示 + 社区共识混合估计，未做与本研究同等严格的贝叶斯识别。
-\end{enumerate}
-
-\subsection{未来工作}
-
-（i）跨平台数据交叉验证；（ii）人工金标 $\sim 200$ 条录播验证 LLM 抽取准确率；（iii）扩展到原神/FGO/BA 的同等贝叶斯识别，建立 \textbf{抽卡透明度评级体系}；（iv）家族级别的星光值与污染产出速度具体关系建模；（v）2017 网信办概率公示规范下的合规性评价。
+主要局限：（i）单平台数据（仅 B 站，缺 XHS/贴吧/TapTap 对照）；（ii）LLM 抽取无人工金标交叉验证；（iii）自报权重 4 段简化未捕捉中段渐变与凑整效应；（iv）表~\ref{tab:balls} 中各球 $q_{\text{cap}}$ 是社区共识；（v）数据看似硬保底亦可能是软保底窗口太窄 + 自报偏差抹平的混淆；（vi）表~\ref{tab:cross_gacha} 横向对比的其他游戏 $E[\tau]$ 未做同等贝叶斯识别。未来工作包括跨平台交叉验证、人工金标录播、扩展同等识别框架到原神/FGO/碧蓝档案以建立抽卡透明度评级体系，以及家族级星光值--污染产出速度的具体建模。
 
 
 \section{CONCLUSION / 结论}
@@ -791,37 +767,27 @@ M1 与 M2/M3 给出的 $\hat p_0$ 不同（$0.092$ vs $0.062$），反映出"高
 本文给出对腾讯《洛克王国：世界》异色精灵保底机制的第一份系统贝叶斯识别。基于 $266$ 条经清洗与选择偏差校正的玩家自报数据：
 
 \begin{enumerate}
-    \item \textbf{综合概率被强烈拒绝}：三个候选模型综合出货率后验均集中在 $[0.06, 0.09]$，是官方公示 $0.02$ 的 \textbf{3--4.5 倍}（$P(p_0 < 0.0143) = 0\%$）；
-    \item \textbf{硬保底是真实机制}：M1 LOO 严格主导（$\Delta\text{elpd} > 13$）；M2 退化为 $k^* = 78$，M3 退化为 $\eta = 19.3$；民间"70--75 冲刺大法"在 M1 无记忆性下统计无效；
-    \item \textbf{家族异质性显著}：分层 Beta-Binomial 给出家族级 $\hat p_{0,f} \in [0.08, 0.17]$，最易出（贝瑟）与最难出（恶魔狼）相差 $2\times$，对应每日异色产出差异 $\pm 30\%$；
-    \item \textbf{时间预算 LP 给出三档玩家最优 SOP}：占优策略恒为"属性球抓污染 + 普通球摔野怪 + 单颗 $80$k 捕光球抓异色"；单轮耗时（$\sim 0.5$ h/异色）始终是绑定约束；轻度 $0.5$h $\Rightarrow$ $0.85$ 异色/天，中度 $3$h $\Rightarrow$ $5.1$，重度 $10$h $\Rightarrow$ $17$；
-    \item \textbf{棱镜球氪金不值}：升格期权需收藏溢价 $\phi > 640$ 才回本，远超社区估计；通行证 $3$ 个/赛季为上限；
-    \item \textbf{抽卡谱定位}：《洛克王国：世界》位于"低 $E[\tau] + $ 严硬保底"友善区，玩家长期获取效率优于原神/FGO，但官方公示透明度被本研究证伪——\textbf{诚实度 $\ne$ 友好度，此案例是后者真实更高的反向欺骗}。
+    \item \textbf{综合概率被强烈拒绝、硬保底是真实机制}：三模型综合出货率后验集中在 $[0.06, 0.09]$，是官方 $0.02$ 的 \textbf{3--4.5 倍}（$P(p_0 < 0.0143) = 0\%$）；M1 LOO 严格主导（$\Delta\text{elpd} > 13$，M2 退化为 $k^* = 78$、M3 退化为 $\eta = 19.3$），民间"70--75 冲刺大法"统计无效；
+    \item \textbf{家族异质性显著}：分层 Beta-Binomial 给出家族级 $\hat p_{0,f} \in [0.08, 0.17]$，最易出（贝瑟）与最难出（恶魔狼）相差 $2\times$，每日异色产出差异 $\pm 30\%$；游戏内 $v_0$ 异质性恰好对冲该差异（恶魔狼 $v_0 \approx 6\,000$ 是大耳帽兜 $\approx 1\,800$ 的 $3.3\times$）；
+    \item \textbf{时间预算 LP 三档玩家 SOP}：占优策略恒为"属性球抓污染 + 普通球摔野怪 + 单颗 $80$k 捕光球抓异色"；单轮耗时（$\sim 0.5$ h/异色）始终是绑定约束；产出 $0.85 / 5.1 / 17$ 异色/天 (轻/中/重度)；棱镜球升格收藏溢价需 $\phi > 640$ 才回本，氪金不合理；
+    \item \textbf{抽卡谱定位}：本作位于"低 $E[\tau] + $ 严硬保底"友善区，玩家长期获取效率优于原神 / FGO，但官方公示透明度被证伪——\textbf{诚实度 $\ne$ 友好度，此案例是后者真实更高的反向欺骗}。
 \end{enumerate}
 
-更具一般性的方法论贡献：本研究表明"自报抽卡数据"必须做严格的选择偏差校正才能用于推断官方概率；4 段自报权重框架可推广到所有此类研究；提出的抽卡透明度评级体系可作为 2017 网信办概率公示规范的实证补充。
+方法论贡献：自报抽卡数据必须做严格选择偏差校正；4 段自报权重框架可推广，并支持以贝叶斯严谨度建立抽卡透明度评级体系。
 
 
 \section{MATERIALS AND METHODS / 材料与方法}
 
-\textbf{爬虫与数据采集}：B 站评论使用 \texttt{bilibili-api-python} 的 \texttt{get\_comments\_lazy} 接口（避免 412 风控），登录态 cookie 加载。30 个高播放视频 $\times$ 5 关键词 = 26K 条评论原始语料。
-
-\textbf{LLM 抽取}：候选过滤 = 正则模板 + 嵌入语义召回。LLM 使用 codex GPT-5.4 二次结构化，按 schema $\{$ball\_or\_pollution, scope, n, family\_hint, confidence, excerpt$\}$ 输出。
-
-\textbf{贝叶斯模型}：PyMC 5.25.1 + PyTensor 2.31.7。NUTS 4 chains $\times$ 1\,500 draws ($1\,500$ tune)，$\texttt{target\_accept}=0.92$。每条样本似然为 $X_i \sim$ Categorical($P_{\text{obs}}$)，由 (\ref{eq:pmf}) $\times$ (\ref{eq:wk}) 经 normalization 给出。LOO 使用 ArviZ $0.23$ \texttt{az.compare()}。
-
-\textbf{经济仿真}：对每个 $(p_0, \text{机制}, v_0, \text{球})$ 组合数值积分 (\ref{eq:expected_profit})。多池贪心分配：每步将下一次战斗分给边际 $p_k$ 最大的池。
-
-\textbf{开源}：完整数据集（清洗后 \texttt{pity\_clean.jsonl}，266 条单池样本）+ 代码（\texttt{src/analysis/} 13 个 Python 模块）+ 24 张图（\texttt{figures/}）+ 文档（\texttt{docs/} 8 个 Markdown）+ 本论文 LaTeX 源（\texttt{paper/}），全部已开源至 \texttt{https://github.com/bigearhooded/ShinyJingling}（MIT License，96 文件，约 4.1 MB）。爬虫的 cookie 与 \texttt{data/raw/} 原始评论语料按伦理与平台 ToS 不公开。\\
-
-SUPPLEMENTARY MATERIAL / 补充材料\\
-补充材料包括：（1）原始爬取数据 \texttt{data/raw/bili\_*.jsonl}；（2）LLM 抽取中间结果与清洗 audit；（3）所有 PyMC InferenceData (.nc 文件)；（4）经济仿真的全 $(v_0, p_0, \text{球})$ grid 结果；（5）球类 $q_{\text{cap}}$ 经验估计的来源说明。\\
-
+\textbf{数据 + 模型}：B 站 \texttt{get\_comments\_lazy} API 抽 30 视频 $\times$ 5 关键词 $\approx 26$K 评论；正则粗筛 + 嵌入召回 + codex GPT-5.4 二次结构化抽取 + 手工清洗 $\Rightarrow$ 266 条单池。PyMC 5.25.1\cite{ref_pymc} NUTS 4 chains $\times$ 1\,500 draws，$\texttt{target\_accept}=0.92$；似然由 (\ref{eq:pmf}) $\times$ (\ref{eq:wk}) 归一化的 Categorical 给出；LOO 用 ArviZ \texttt{az.compare()}\cite{ref_loo}；家族分层在相同框架上加 Beta 超先验 partial pooling\cite{ref_self_report_bias}；经济仿真按 (\ref{eq:expected_profit}) 数值积分；时间预算 LP 网格步长 0.05；多池用边际 $p_k$ 贪心。\textbf{开源}：完整工件（数据 + 13 模块代码 + 30 张图 + 8 个 markdown 文档 + LaTeX 源）见 \texttt{https://github.com/bigearhooded/ShinyJingling}（MIT 许可；爬虫 cookie 与原始评论按平台 ToS 不公开）。\\
 
 ACKNOWLEDGEMENT / 致谢\\
 本研究由\textbf{安妮（商店街安妮商店店长，见图~\ref{fig:price_evidence}a）}全额赞助。安妮女士在 4.16 版本主动将高级球价格由 15\,000 洛克贝下调至 12\,000 洛克贝以应对远行商人的市场竞争，使得本研究中"高级球抓污染"路线的经济仿真得以基于真实交易价格——这一价格调整是表~\ref{tab:balls} 与第~VIII 节策略推论的基础常数。安妮商店位于商店街（地图西南方向入口可直接传送），同时经营消耗品、技能石、魔法粉尘及隐藏精灵幻境入口（"小夜"获取链路）。此外感谢 B 站玩家社区对异色保底机制的开放讨论，使本研究的自报数据采集成为可能；感谢魔法学院全域魔法传送阵系统的稳定运行，使得多池并行实验中的家族池切换零延迟。计算资源由洛克王国魔法学院"分层贝叶斯"研究组提供。LLM 抽取使用 OpenAI GPT-5.4（codex）。S.H.*.T Journal 反串学术风格启发了本文的标题与组织。
 
 
+\enlargethispage{12\baselineskip}
+\scriptsize
+\setlength{\itemsep}{-2pt}
+\setlength{\parsep}{0pt}
 \begin{thebibliography}{1}
 
 \bibitem{ref_official_pity} 腾讯《洛克王国：世界》官方公告，``S1 赛季异色精灵综合概率说明，'' 2026 年 3 月，\texttt{https://lkwg.qq.com/}。
@@ -835,12 +801,6 @@ ACKNOWLEDGEMENT / 致谢\\
 \bibitem{ref_pymc} Abril-Pla, O., et al., ``PyMC: A Modern and Comprehensive Probabilistic Programming Framework in Python，'' \textit{PeerJ Computer Science}，vol.~9，e1516，2023。
 
 \bibitem{ref_loo} Vehtari, A., Gelman, A., \& Gabry, J., ``Practical Bayesian Model Evaluation Using Leave-One-Out Cross-Validation and WAIC，'' \textit{Statistics and Computing}，vol.~27，pp.~1413--1432，2017。
-
-\bibitem{ref_genshin_pity} miHoYo Co., Ltd., ``《原神》5$\star$ 抽取概率公告，'' \texttt{https://genshin.hoyoverse.com/}, 2024。
-
-\bibitem{ref_fgo_pity} TYPE-MOON / Aniplex, Inc., ``Fate/Grand Order Gacha Probability Disclosure，'' 2024。
-
-\bibitem{ref_meila_vi} Meilă, M., ``Comparing Clusterings—An Information Based Distance，'' \textit{Journal of Multivariate Analysis}，vol.~98，no.~5，pp.~873--895，2007。
 
 \end{thebibliography}
 
