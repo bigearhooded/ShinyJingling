@@ -502,6 +502,24 @@ PyMC NUTS 4 chains $\times$ 1\,500 draws，6 发散/6\,000 (0.1\%, 可接受)，
     \label{tab:balls}
 \end{table}
 
+表~\ref{tab:balls} 中两项关键价格——\textbf{安妮商店的洛克贝定价机制} 与 \textbf{捕光球的 80\,000 洛克贝/颗交易价}——可以从游戏内截图直接核验（图~\ref{fig:price_evidence}）。
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{figures/IMG_5461.jpg}\\
+        \footnotesize (a) 商店街\textbf{安妮商店}界面：店主安妮（粉发蓝裙）所售"洛克贝 $\times 2\,000$" 等小额货币包，售价 25 单位；玩家持有 $1.11 \times 10^7$ 洛克贝。
+    \end{minipage}\\[6pt]
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{figures/IMG_5463.jpg}\\
+        \footnotesize (b) S1 赛季商店\textbf{捕光球}购买界面：「暗夜拾光」赛季纪念咕噜球，"能十分轻易地捕捉精灵"（即 $q^s = 1.00$）；购买 $26$ 颗合计 $2.08 \times 10^6$ 洛克贝 $\Rightarrow$ 单价 $80\,000$ 洛克贝。
+    \end{minipage}
+    \caption{表~\ref{tab:balls} 中关键价格的游戏内实测证据。(a) 安妮商店店主与商品列表（致谢段所述赞助方）；(b) 捕光球 $80\,000$ 洛克贝/颗的交易凭证——这是第~VIII 节策略推论中"异色统一用捕光球抓"的成本基线。}
+    \label{fig:price_evidence}
+\end{figure}
+
 \subsection{球类选择主导收益（不是"是否全抓"）}
 
 图~\ref{fig:ball_grid} 给出 $v_0 \times $ 球类的 S-F 全抓策略每循环利润热图（$p_0 = 0.062$, M1, 异色固定用捕光球）。\textbf{核心发现}：
@@ -787,7 +805,7 @@ SUPPLEMENTARY MATERIAL / 补充材料\\
 
 
 ACKNOWLEDGEMENT / 致谢\\
-本研究由\textbf{安妮（商店街安妮商店店长）}全额赞助。安妮女士在 4.16 版本主动将高级球价格由 15\,000 洛克贝下调至 12\,000 洛克贝以应对远行商人的市场竞争，使得本研究中"高级球抓污染"路线的经济仿真得以基于真实交易价格——这一价格调整是表~\ref{tab:balls} 与第~VIII 节策略推论的基础常数。安妮商店位于商店街（地图西南方向入口可直接传送），同时经营消耗品、技能石、魔法粉尘及隐藏精灵幻境入口（"小夜"获取链路）。此外感谢 B 站玩家社区对异色保底机制的开放讨论，使本研究的自报数据采集成为可能；感谢魔法学院全域魔法传送阵系统的稳定运行，使得多池并行实验中的家族池切换零延迟。计算资源由洛克王国魔法学院"分层贝叶斯"研究组提供。LLM 抽取使用 OpenAI GPT-5.4（codex）。S.H.*.T Journal 反串学术风格启发了本文的标题与组织。
+本研究由\textbf{安妮（商店街安妮商店店长，见图~\ref{fig:price_evidence}a）}全额赞助。安妮女士在 4.16 版本主动将高级球价格由 15\,000 洛克贝下调至 12\,000 洛克贝以应对远行商人的市场竞争，使得本研究中"高级球抓污染"路线的经济仿真得以基于真实交易价格——这一价格调整是表~\ref{tab:balls} 与第~VIII 节策略推论的基础常数。安妮商店位于商店街（地图西南方向入口可直接传送），同时经营消耗品、技能石、魔法粉尘及隐藏精灵幻境入口（"小夜"获取链路）。此外感谢 B 站玩家社区对异色保底机制的开放讨论，使本研究的自报数据采集成为可能；感谢魔法学院全域魔法传送阵系统的稳定运行，使得多池并行实验中的家族池切换零延迟。计算资源由洛克王国魔法学院"分层贝叶斯"研究组提供。LLM 抽取使用 OpenAI GPT-5.4（codex）。S.H.*.T Journal 反串学术风格启发了本文的标题与组织。
 
 
 \begin{thebibliography}{1}
