@@ -440,6 +440,38 @@ PyMC NUTS 4 chains $\times$ 1\,500 draws，6 发散/6\,000 (0.1\%, 可接受)，
 \end{itemize}
 \textbf{家族选择对每日产出的影响达到 $\pm 30\%$}，与 §VIII 中"狩猎时间份额 $0.85$ 不变"的策略推论同等重要。
 
+\subsection{游戏内回顾价值的隐式平衡：易出便宜，难出贵}
+
+游戏设计师对家族异质性的隐式平衡，可以从游戏内"异色炫彩回顾结算界面"直接观测到。图~\ref{fig:reward_settle} 给出两个对照家族的截图：
+
+\begin{itemize}
+    \item \textbf{大耳帽兜}（图~\ref{fig:reward_settle}a）：在本研究"其他合并"桶中，结算界面显示合计倍率 $\times 6\,000$，获得奖励 $1.08 \times 10^7$ 洛克贝 $\Rightarrow$ 单位回顾值 $v_0 \approx 1\,800$ 洛克贝。
+    \item \textbf{恶魔狼}（图~\ref{fig:reward_settle}b）：本研究中最难出家族（$\hat p_{0,f} = 0.080$），结算界面显示合计倍率 $\times 1\,500$，获得奖励 $9.0 \times 10^6$ 洛克贝 $\Rightarrow$ 单位回顾值 $v_0 \approx 6\,000$ 洛克贝。
+\end{itemize}
+
+\textbf{关键观察}：恶魔狼的单位回顾值是大耳帽兜的 $\sim 3.3 \times$，恰好抵消其 $1/p_{0,f}$ 比值（$0.17 / 0.080 \approx 2.1\times$）的难度劣势。两个家族的"每小时刷异色期望洛克贝产出"近似相等：
+\[
+\frac{v_0 \cdot 10}{t_{\text{cycle}}} \;\approx\;
+\begin{cases} 1\,800 \cdot 10 / 0.4 = 4.5 \times 10^4 & (\text{大耳帽兜}) \\ 6\,000 \cdot 10 / 0.7 = 8.6 \times 10^4 & (\text{恶魔狼}) \end{cases}
+\]
+两者同量级（仅 $1.9\times$ 差距），表明游戏设计师有意通过 $v_0$ 的家族异质性平衡 $p_{0,f}$ 异质性。然而该平衡并非完全对称：恶魔狼路线的"小时洛克贝期望"略高，但方差更大（$\hat E[\tau] = 12.8$ vs $6.3$，$\sigma^2$ 比例 $\sim 4 \times$）。\textbf{风险厌恶玩家应优先大耳帽兜路线；风险中性或偏好玩家应优先恶魔狼路线。}此外，奖牌数量（"轻风之息""星月交辉"等成就奖牌）会进一步放大合计倍率，激励玩家长期投入单家族刷取。
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{figures/IMG_5459.jpg}\\
+        \footnotesize (a) 大耳帽兜 异色炫彩，合计 $\times 6\,000$，奖励 $1.08\times 10^7$ 洛克贝
+    \end{minipage}\\[6pt]
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{figures/IMG_5460.jpg}\\
+        \footnotesize (b) 恶魔狼 异色炫彩，合计 $\times 1\,500$，奖励 $9.0\times 10^6$ 洛克贝
+    \end{minipage}
+    \caption{游戏内"异色炫彩回顾结算"界面截图（4.16 版本）。"了不起天分 $\times 5$" 是 $m_{\text{poll}}$，"异色 $\times 10$" 是 $m_{\text{shiny}}$，"炫彩 $\times 10$" 是棱镜球升格倍数；"轻风之息""完美无瑕"等是奖牌成就额外乘子。难出家族（恶魔狼）的单位回顾值 $v_0 \approx 6\,000$ 是易出家族（大耳帽兜，$v_0 \approx 1\,800$）的 $\sim 3.3\times$，恰好对冲 $1/p_{0,f}$ 难度差，体现游戏设计师"难度--价值"平衡。}
+    \label{fig:reward_settle}
+\end{figure}
+
 
 
 \section{ECONOMIC SIMULATION / 经济仿真}
