@@ -1,0 +1,41 @@
+# Credentials / cookies
+bin/
+*.cookie
+*.env
+cookies.json
+
+# Raw scraped data (not redistributed)
+data/raw/
+data/processed/embed_*
+data/processed/llm_candidates.jsonl
+data/processed/merged_candidates.jsonl
+data/processed/pity_mentions*
+
+# PyMC InferenceData netCDF (large; csv summaries kept)
+data/processed/pity_fits/*.nc
+
+# LaTeX build artefacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.synctex.gz
+paper/main_*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+env/
+
+# OS / editor
+.DS_Store
+*.swp
+.vscode/
+.idea/

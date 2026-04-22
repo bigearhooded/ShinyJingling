@@ -1,0 +1,185 @@
+# LLM Pity Extraction Summary
+
+## Input and source breakdown
+- Total candidates input: 11658
+- Input source counts:
+- `regex`: 6658
+- `embed`: 3014
+- `both`: 1986
+- Kept source counts:
+- `regex`: 111
+- `embed`: 217
+- `both`: 290
+- New kept source counts vs previous run:
+- `regex`: 111
+- `embed`: 217
+- `both`: 290
+- Rejected/skipped source counts:
+- `regex`: 6547
+- `embed`: 2797
+- `both`: 1696
+
+## Kept reports by scope
+- Total kept: 618
+- `single_pool`: 282
+- `cross_pool_total`: 266
+- `qualitative_no_n`: 70
+- `unknown`: 0
+
+## Histogram: single_pool n
+- `1`: 97
+- `2`: 33
+- `3`: 24
+- `4`: 11
+- `5`: 15
+- `6`: 3
+- `7`: 8
+- `8`: 1
+- `9`: 5
+- `10`: 10
+- `11`: 1
+- `12`: 1
+- `15`: 1
+- `18`: 1
+- `20`: 6
+- `21`: 1
+- `22`: 1
+- `28`: 1
+- `30`: 3
+- `36`: 1
+- `40`: 10
+- `45`: 1
+- `50`: 6
+- `54`: 1
+- `55`: 2
+- `56`: 1
+- `59`: 1
+- `60`: 1
+- `70`: 6
+- `72`: 1
+- `79`: 2
+- `80`: 10
+- `90`: 3
+- `92`: 1
+- `100`: 4
+- `120`: 3
+- `130`: 1
+- `150`: 1
+- `537`: 1
+- `1000`: 1
+- `5600`: 1
+
+## Histogram: cross_pool_total n
+- `1`: 27
+- `2`: 9
+- `3`: 11
+- `4`: 1
+- `5`: 3
+- `8`: 2
+- `9`: 1
+- `10`: 9
+- `12`: 1
+- `13`: 2
+- `15`: 2
+- `18`: 1
+- `20`: 7
+- `30`: 1
+- `40`: 7
+- `45`: 1
+- `50`: 5
+- `53`: 2
+- `60`: 3
+- `63`: 1
+- `64`: 1
+- `65`: 1
+- `68`: 1
+- `70`: 1
+- `76`: 1
+- `79`: 1
+- `80`: 14
+- `81`: 1
+- `85`: 1
+- `90`: 3
+- `100`: 1
+- `106`: 1
+- `116`: 1
+- `120`: 4
+- `130`: 1
+- `170`: 1
+- `190`: 1
+- `500`: 5
+- `550`: 1
+- `560`: 1
+- `600`: 5
+- `700`: 2
+- `720`: 1
+- `800`: 4
+- `900`: 1
+- `1000`: 17
+- `1200`: 6
+- `1371`: 1
+- `1400`: 1
+- `1500`: 4
+- `1600`: 2
+- `1700`: 2
+- `1800`: 4
+- `1900`: 3
+- `2000`: 25
+- `2200`: 1
+- `2250`: 1
+- `2400`: 3
+- `2492`: 1
+- `2500`: 7
+- `2600`: 2
+- `2800`: 3
+- `3000`: 14
+- `3200`: 1
+- `3500`: 2
+- `3600`: 1
+- `4000`: 5
+- `4200`: 1
+- `4500`: 2
+- `5000`: 1
+- `6000`: 1
+- `6200`: 1
+- `7000`: 1
+- `7600`: 1
+- `9000`: 1
+
+## qualitative_no_n
+- Count: 70
+
+## Top 10 single_pool excerpts by like
+- like=44 n=100 family=None source=embed: 触发污染一百次了，还没出一个幻的异色，不知道还要刷多久
+- like=17 n=2 family=None source=both: 谢谢兄弟，虽然你阴了我，但是我今天两只污染22只精灵出了一只异色野生的～[OK]
+- like=17 n=22 family=None source=both: 谢谢兄弟，虽然你阴了我，但是我今天两只污染22只精灵出了一只异色野生的～[OK]
+- like=11 n=1 family=雪熊 source=regex: 我是昨天抓的，刚开始抓了6只出污染了，我一看同时出了两个污染标，一个噩梦熊一个果冻，然后我把果冻打死了，攒了十次污染清完之后下一个熊污染又伴生了一个果冻，然后我
+- like=11 n=2 family=雪熊 source=regex: 是有问题的，我是昨天抓的，刚开始抓了6只出污染了，我一看同时出了两个污染标，一个噩梦熊一个果冻，然后我把果冻打死了，攒了十次污染清完之后下一个熊污染又伴生了一个
+- like=10 n=1 family=None source=embed: 谁跟你说污染一定了不起的，先说一下我是知道异色长什么样的，单纯觉得上炫彩不好看，用了一个草系的球
+- like=10 n=72 family=None source=both: 洗的人自己看吧，我刷了早就超过80个污染了，光是仓库里就有72个噩梦，还是没出异色，这官方不仅暗改数据估计还做了两份账，这完全规则说一套 机制另一套，纯骗人
+- like=10 n=80 family=None source=both: 洗的人自己看吧，我刷了早就超过80个污染了，光是仓库里就有72个噩梦，还是没出异色，这官方不仅暗改数据估计还做了两份账，这完全规则说一套 机制另一套，纯骗人
+- like=9 n=90 family=帽兜 source=both: 没出，事实证明80保底只是骗局，我打了90只噩梦帽兜了，还是没出异色
+- like=9 n=1 family=柴渣 source=embed: 回复 @庆no蛏王 :哥们，柴渣虫不就是污染出现，然后你打完才有异色和普通版的吗，我有一个污染的兔子
+
+## Comparison vs previous run
+- Previous run reports: 128
+- Current reports: 618
+- Net change: +490
+- Exact previous-row overlap could not be recomputed because the 128-row baseline file was already overwritten before this final pass.
+- Current embed-only kept rows: 217
+- Example embedding-only catches:
+  - rpid=294618643937 n=1 scope=single_pool: 其实我第一只噩梦就出了异色，难道是我长得帅吗[笑哭]
+  - rpid=294673460033 n=1 scope=single_pool: 回复 @我是花叫兽 :刚刚看了其他刷恶魔狼异色的都和我很像都是在刷过程中出了一个污染鬼头精灵后面白色狼王就差不多了[辣眼睛]不知道是不是巧合
+  - rpid=294676099617 n=2 scope=single_pool: 连着出了两只污染骷髅头，我是不是得把这家伙精华了才知道是不是异色啊[热]（看之前有人说公测把异色污染去掉了，所以没褪污染的话一定是原色的精灵，有这个说法吗）
+  - rpid=294697831633 n=1 scope=single_pool: 和我的六百球三异色，第一只污染恶魔狼就是异色，连抓两只异色通行证宠物的高爆号说去吧
+  - rpid=294951646913 n=3 scope=single_pool: 好恶心的任务。为了这个任务我刷了不少，才三只污染的粉星仔 异不异色都随意了 想要个果实都这么难
+  - rpid=295103205745 n=None scope=qualitative_no_n: 这个噩梦有时候刷的莫名其妙，我前天刚到菇+仪式雕像准备刷粉星仔，结果一个球没扔出来个污染恶魔狼，还是个异色的，给我朋友了，昨天准备刷治愈兔也是还没扔球呢出了个污
+  - rpid=295183921025 n=1 scope=single_pool: 我第三个噩梦奇丽叶出异色第一个噩梦雪影娃娃出异色[doge_金箍]
+  - rpid=295183921025 n=3 scope=single_pool: 我第三个噩梦奇丽叶出异色第一个噩梦雪影娃娃出异色[doge_金箍]
+  - rpid=295189401105 n=None scope=qualitative_no_n: 我也扔了几百球，没出异色但是出了一个蓝绿星的炫彩
+  - rpid=295189657329 n=3 scope=single_pool: 我第三只污染就是异色，当时没注意，还忘记用棱镜球了[笑哭]
+
+## Notes
+- Previous run baseline is 128 reports. If that exact file is present before execution, those adjudicated rows are retained and annotated with merged candidate `source`; otherwise the current file is rebuilt from the merged candidates with the stricter recall rules.
+- New recall is conservative: concrete `污染/噩梦` counts are preferred; ball/catch totals are kept as `cross_pool_total`; vague counts such as `几百`, `好几百`, `几十`, and `上千` are `qualitative_no_n` with `n=null`.
+- Mechanism Q&A, recruitment/ID posts, Genshin-style gacha language, and first-shiny showoff without pollution context were skipped.
