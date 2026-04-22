@@ -67,7 +67,7 @@
     \vspace*{0.1cm}
     通讯作者：大耳帽兜（e-mail：bigear-hooded@magic-academy.lkwg）\\
     \vspace*{0.1cm}
-    数据集、代码与所有图表见附录与 \texttt{https://github.com/...}（待开源）\\
+    数据集、代码、所有图表与本论文 LaTeX 源已开源：\texttt{https://github.com/bigearhooded/ShinyJingling}\\
     \normalsize
 }
 
@@ -748,7 +748,7 @@ M1 与 M2/M3 给出的 $\hat p_0$ 不同（$0.092$ vs $0.062$），反映出"高
 
 \textbf{经济仿真}：对每个 $(p_0, \text{机制}, v_0, \text{球})$ 组合数值积分 (\ref{eq:expected_profit})。多池贪心分配：每步将下一次战斗分给边际 $p_k$ 最大的池。
 
-\textbf{开源}：完整数据集（清洗后 \texttt{pity\_clean.jsonl}）+ 代码（\texttt{src/analysis/} 13 个 Python 模块）+ 20 张图（\texttt{figures/}）+ 文档（\texttt{docs/} 8 个 Markdown）位于 \texttt{./analysis/26\_luoke/} 项目目录，预计开源至 \texttt{https://github.com/bigearhooded/luoke-shiny-economics}。\\
+\textbf{开源}：完整数据集（清洗后 \texttt{pity\_clean.jsonl}，266 条单池样本）+ 代码（\texttt{src/analysis/} 13 个 Python 模块）+ 24 张图（\texttt{figures/}）+ 文档（\texttt{docs/} 8 个 Markdown）+ 本论文 LaTeX 源（\texttt{paper/}），全部已开源至 \texttt{https://github.com/bigearhooded/ShinyJingling}（MIT License，96 文件，约 4.1 MB）。爬虫的 cookie 与 \texttt{data/raw/} 原始评论语料按伦理与平台 ToS 不公开。\\
 
 SUPPLEMENTARY MATERIAL / 补充材料\\
 补充材料包括：（1）原始爬取数据 \texttt{data/raw/bili\_*.jsonl}；（2）LLM 抽取中间结果与清洗 audit；（3）所有 PyMC InferenceData (.nc 文件)；（4）经济仿真的全 $(v_0, p_0, \text{球})$ grid 结果；（5）球类 $q_{\text{cap}}$ 经验估计的来源说明。\\
@@ -766,7 +766,7 @@ ACKNOWLEDGEMENT / 致谢\\
 
 \bibitem{ref_self_report_bias} Heckman, J., ``Sample Selection Bias as a Specification Error，'' \textit{Econometrica}，vol.~47，no.~1，pp.~153--161，1979。
 
-\bibitem{ref_v2_design} bigearhooded, ``异色狩猎研究设计 V2，'' 项目内部文档 \texttt{docs/01\_research\_design.md}（2026 年 4 月 21 日）。
+\bibitem{ref_v2_design} 大耳帽兜（Big-eared Hooded Bunny）, ``异色狩猎研究设计 V2，'' 项目内部文档 \texttt{docs/01\_research\_design.md}（2026 年 4 月 21 日）。
 
 \bibitem{ref_pymc} Abril-Pla, O., et al., ``PyMC: A Modern and Comprehensive Probabilistic Programming Framework in Python，'' \textit{PeerJ Computer Science}，vol.~9，e1516，2023。
 
